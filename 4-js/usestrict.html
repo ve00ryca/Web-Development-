@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Der "moderne" Modus</title>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Use strict</h1>
+        <script>
+            "use strict";
+            /* Defines that JavaScript code should be executed in 
+			"strict mode".
+			 All modern browsers support "use strict" except 
+			 Internet Explorer 9 and lower.
+			 Strict mode makes it easier to write "secure" JavaScript.
+			 Strict mode changes previously accepted "bad syntax" into 
+			 real errors. E.g. undeclared variables or object can not be used.
+			 Recognized ONLY at the beginning of a script or a function! */
+			
+			/* var ist die veraltete Schreibweise von let*/
+			let name = "Elena-Mariya";
+			alert(name);
+			
+			/* The following however proves that var and let are
+			 interchangable because a SyntaxError with a message 
+			 "redeclaration of let name" appears. */
+			//var name = "Elena-Mariya";
+            
+			//The following will alert "undefined" in strict mode
+			function myFunction() 
+			{ 
+				alert(this); 
+			}
+			myFunction();
+					
+			const AGE = "29";
+			alert(AGE);
+			/* An attempt to change the value of a constant
+			results in a TypeError-message. See F12 -> console.
+			The alert below takes no effect. */
+			age = "28";
+			alert(age);
+			
+			//These are simple numbers and strings which can remain undeclared.
+			console.log(2-1);
+			console.log("John" + "Doe");
+		
+        </script>
+    </body>
+</html>
